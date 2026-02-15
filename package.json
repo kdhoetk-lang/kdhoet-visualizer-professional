@@ -1,0 +1,16 @@
+{
+  "name": "kdhoet-visualizer-pro",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "com.kdhoet.studio",
+    "win": { "target": "portable" }
+  }
+}
