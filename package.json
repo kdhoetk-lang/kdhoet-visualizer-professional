@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
     "build": "electron-builder --win"
   },
   "devDependencies": {
@@ -12,11 +11,8 @@
   },
   "build": {
     "appId": "com.kdhoet.studio",
-    "productName": "Kdhoet Studio AI",
     "win": {
-      "target": [
-        "portable"
-      ]
+      "target": ["portable"]
     },
     "directories": {
       "output": "dist"
