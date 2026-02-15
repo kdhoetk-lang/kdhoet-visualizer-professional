@@ -1,21 +1,26 @@
 name: Build EXE
 on: [push]
+
 jobs:
   release:
     runs-on: windows-latest
     steps:
-      - name: Check out git repository
+      - name: Check out repository
         uses: actions/checkout@v3
-      - name: Install Node.js
+
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
+
       - name: Install dependencies
         run: npm install
+
       - name: Build Electron App
         run: npm run build
-      - name: Upload EXE
+
+      - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: Kdhoet-Studio-EXE
+          name: Kdhoet-Visualizer-EXE
           path: dist/*.exe
